@@ -129,6 +129,19 @@ topMenuLinks.addEventListener('click', function(e){
 
 });
 
+//Part 5: Adding Submenu Interaction
+
+lnk.classList.add('active');
+const linkinData = menuLinks.find(function(linkinOb){    //credits Arthur Bernier / replit
+  return linkinOb.text === lnk.textContent;
+});
+
+showSubmenu = 'subLinks' in linkinData;
+
+if(showSubmenu) {
+
+}
+
 
 
 
