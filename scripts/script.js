@@ -102,7 +102,14 @@ var menuLinks = [
 
 //Part 4: Adding Menu Interaction
 
+
+//Select and cache the all of the <a> elements inside of topMenuEl in a variable named topMenuLinks.
 let topMenuLinks = topMenuEl;
+
+topMenuLinks.addEventListener('click', function(e){
+  e.preventDefault();
+
+});
 
 
 
