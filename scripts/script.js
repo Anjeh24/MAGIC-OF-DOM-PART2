@@ -104,12 +104,32 @@ var menuLinks = [
 
 
 //Select and cache the all of the <a> elements inside of topMenuEl in a variable named topMenuLinks.
-let topMenuLinks = topMenuEl;
+let topMenuLinks = document.querySelectorAll('#top-menu a');
+let viewSubmenu = false;
 
 topMenuLinks.addEventListener('click', function(e){
   e.preventDefault();
+  const lnk = e.target;
+  if(lnk.tagName !== 'a'){
+   
+  }
+  console.log(lnk.textContent); //well, trying to see if it works
+//The event listener should add the active class to the <a> element that was clicked, unless it was already active, in which case it should remove it.
+
+  if(lnk.classList.contains('active')){
+    lnk.classList.remove('active');
+    viewSubmenu = false;
+    subMenuEl.style.top = '0';
+    return; 
+  }
+  topMenuLinks.forEach(function(lnk){
+    lnk.classList.remove('active');
+  });
+  lnk.classList.add('active');
 
 });
+
+
 
 
 
